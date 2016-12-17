@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kbR-Oa-Xy5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News-->
+        <scene sceneID="Rht-OR-e3J">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="MQg-jT-dFL" customClass="NewsViewController" customModule="PJRSS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lza-LV-XMo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mgk-GE-kpk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pIv-gq-xDg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WHF-ju-1ah">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewsTableViewCellID" id="tbV-PN-PRc" customClass="NewsTableViewCell" customModule="PJRSS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tbV-PN-PRc" id="ODq-ml-iyL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLl-qq-whI">
+                                                    <rect key="frame" x="20" y="11.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JLl-qq-whI" firstAttribute="centerY" secondItem="ODq-ml-iyL" secondAttribute="centerY" id="Drw-k4-PIv"/>
+                                                <constraint firstItem="JLl-qq-whI" firstAttribute="leading" secondItem="ODq-ml-iyL" secondAttribute="leading" constant="20" id="Gyh-cI-jHL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="newsTitleLabel" destination="JLl-qq-whI" id="Nci-Jo-eGF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mgk-GE-kpk" firstAttribute="top" secondItem="WHF-ju-1ah" secondAttribute="bottom" id="PRY-Cp-bRC"/>
+                            <constraint firstItem="WHF-ju-1ah" firstAttribute="top" secondItem="lza-LV-XMo" secondAttribute="bottom" id="VCR-fb-vit"/>
+                            <constraint firstItem="WHF-ju-1ah" firstAttribute="leading" secondItem="pIv-gq-xDg" secondAttribute="leading" id="g5v-cj-Jks"/>
+                            <constraint firstAttribute="trailing" secondItem="WHF-ju-1ah" secondAttribute="trailing" id="qgp-iv-UEC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="News" id="Na3-2W-x3i"/>
+                    <connections>
+                        <outlet property="newsTableView" destination="WHF-ju-1ah" id="ZdF-gc-iXU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ayf-Yj-p3R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="152"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mp1-rB-5TF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kbR-Oa-Xy5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3xP-ud-YSe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MQg-jT-dFL" kind="relationship" relationship="rootViewController" id="iKb-m2-foK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDV-1Z-C9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="152.47376311844079"/>
+        </scene>
+    </scenes>
+</document>
