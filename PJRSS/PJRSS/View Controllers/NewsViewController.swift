@@ -12,7 +12,7 @@ class NewsViewController: UIViewController {
     
     @IBOutlet weak var newsTableView: UITableView!
     
-    fileprivate let colors: [String] = ["Blue", "Yellow", "Black", "Green", "Magenta", "Purple", "Gray", "Cyan", "Orange", "Beige", "Pink", "😃", "😡", "😩", "💛", "💌", "🍎", "😀", "😃", "😄", "😁", "😆", "😅", "😂", "🤣", "☺️", "😊", "😇", "🙂", "🙃", "😉", "😌"]
+    fileprivate var news: [News] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,24 +20,20 @@ class NewsViewController: UIViewController {
         self.newsTableView.dataSource = self
         self.newsTableView.delegate = self
         
-        var word: String?
-        word = "Some word"
-        print(word)
         
-        print(word ?? "NOPE")
+        let news1: News = News(date: "16/11/1992", title: "Nintendo Switch", description: "Nintendo is doing something interesting with its next console, the Switch, which is targeting a March 2017 release window.", imageName: "news1.png")
         
-        if let safeWord: String = word {
-            print(safeWord)
-        }
+        let news2: News = News(date: "10/12/2016", title: "Super Mario Run sees 37 million downloads, $14 million in revenue in first 3 days", description: "Nintendo’s investors haven’t been happy with the performance of the new iPhone game, “Super Mario Run,” which has led to falling share prices over concerns with the game’s payment model.", imageName: "news2.jpg")
         
-        guard let safeWord2: String = word else { return }
-        print(safeWord2)
+        let news3: News = News(date: "22/12/2016", title: "EFF urges companies to prepare for more surveillance", description: "The Electronic Frontier Foundation – a group of tech pioneers trying to keep the Internet open and free – have published an open letter to tech companies pleading them to prepare for an era of increased Internet surveillance and censorship.", imageName: "news3.png")
+        
+        self.news = [news1, news2, news3]
     }
 }
 
 extension NewsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.colors.count
+        return self.news.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,19 +41,15 @@ extension NewsViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let string: String = self.colors[indexPath.row]
-        cell.newsTitleLabel.text = "\(string) - cell number \(indexPath.row)"
-        cell.newsTitleLabel.textColor = UIColor.black
+        let news: News = self.news[indexPath.row]
         
-        switch indexPath.row % 3 {
-        case 0:
-            cell.backgroundColor = UIColor.red.withAlphaComponent(0.2)
-        case 1:
-            cell.backgroundColor = UIColor.green.withAlphaComponent(0.2)
-        case 2:
-            cell.backgroundColor = UIColor.blue.withAlphaComponent(0.2)
-        default:
-            break
+        cell.newsTitleLabel.text = news.title
+        cell.descriptionLabel.text = news.description
+        
+        if let image: UIImage = UIImage(named: news.imageName) {
+            cell.newsImageView.image = image
+            cell.newsImageView.contentMode = .scaleAspectFill
+            cell.newsImageView.clipsToBounds = true
         }
         
         return cell
@@ -65,16 +57,12 @@ extension NewsViewController: UITableViewDataSource {
 }
 
 extension NewsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row % 3 {
-        case 0:
-            return 50.0
-        case 1:
-            return 75.0
-        case 2:
-            return 100.0
-        default:
-            return 44.0
-        }
+        return UITableViewAutomaticDimension
     }
 }

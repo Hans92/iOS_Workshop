@@ -13,6 +13,10 @@
 		E310AE861E05BB48000F3FE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E310AE841E05BB48000F3FE7 /* LaunchScreen.storyboard */; };
 		E310AE921E05BBFE000F3FE7 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E310AE911E05BBFE000F3FE7 /* NewsViewController.swift */; };
 		E310AE941E05BC1A000F3FE7 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E310AE931E05BC1A000F3FE7 /* NewsTableViewCell.swift */; };
+		E3807E0C1E09965A00D51FEC /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3807E0B1E09965A00D51FEC /* News.swift */; };
+		E3807E0E1E09A16C00D51FEC /* news1.png in Resources */ = {isa = PBXBuildFile; fileRef = E3807E0D1E09A16C00D51FEC /* news1.png */; };
+		E3807E101E09A17500D51FEC /* news2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E3807E0F1E09A17500D51FEC /* news2.jpg */; };
+		E3807E121E09A18000D51FEC /* news3.png in Resources */ = {isa = PBXBuildFile; fileRef = E3807E111E09A18000D51FEC /* news3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		E310AE871E05BB48000F3FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E310AE911E05BBFE000F3FE7 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		E310AE931E05BC1A000F3FE7 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		E3807E0B1E09965A00D51FEC /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		E3807E0D1E09A16C00D51FEC /* news1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news1.png; sourceTree = "<group>"; };
+		E3807E0F1E09A17500D51FEC /* news2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = news2.jpg; sourceTree = "<group>"; };
+		E3807E111E09A18000D51FEC /* news3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +64,14 @@
 		E310AE7A1E05BB48000F3FE7 /* PJRSS */ = {
 			isa = PBXGroup;
 			children = (
+				E3807E0A1E09961500D51FEC /* Model */,
 				E310AE8F1E05BBD6000F3FE7 /* View */,
 				E310AE8E1E05BBCE000F3FE7 /* View Controllers */,
 				E310AE7B1E05BB48000F3FE7 /* AppDelegate.swift */,
 				E310AE7F1E05BB48000F3FE7 /* Main.storyboard */,
+				E3807E0D1E09A16C00D51FEC /* news1.png */,
+				E3807E0F1E09A17500D51FEC /* news2.jpg */,
+				E3807E111E09A18000D51FEC /* news3.png */,
 				E310AE821E05BB48000F3FE7 /* Assets.xcassets */,
 				E310AE841E05BB48000F3FE7 /* LaunchScreen.storyboard */,
 				E310AE871E05BB48000F3FE7 /* Info.plist */,
@@ -89,6 +101,14 @@
 				E310AE931E05BC1A000F3FE7 /* NewsTableViewCell.swift */,
 			);
 			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		E3807E0A1E09961500D51FEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E3807E0B1E09965A00D51FEC /* News.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +143,6 @@
 				TargetAttributes = {
 					E310AE771E05BB48000F3FE7 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 927933LZV9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -152,8 +171,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E310AE861E05BB48000F3FE7 /* LaunchScreen.storyboard in Resources */,
+				E3807E101E09A17500D51FEC /* news2.jpg in Resources */,
 				E310AE831E05BB48000F3FE7 /* Assets.xcassets in Resources */,
+				E3807E121E09A18000D51FEC /* news3.png in Resources */,
 				E310AE811E05BB48000F3FE7 /* Main.storyboard in Resources */,
+				E3807E0E1E09A16C00D51FEC /* news1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +188,7 @@
 			files = (
 				E310AE7C1E05BB48000F3FE7 /* AppDelegate.swift in Sources */,
 				E310AE921E05BBFE000F3FE7 /* NewsViewController.swift in Sources */,
+				E3807E0C1E09965A00D51FEC /* News.swift in Sources */,
 				E310AE941E05BC1A000F3FE7 /* NewsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,7 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -276,7 +299,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -289,7 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 927933LZV9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PJRSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.edu.pja.PJRSS;
@@ -302,7 +325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 927933LZV9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PJRSS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.edu.pja.PJRSS;
@@ -330,6 +353,7 @@
 				E310AE8C1E05BB48000F3FE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
