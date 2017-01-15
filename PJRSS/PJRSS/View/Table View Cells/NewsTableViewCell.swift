@@ -13,8 +13,6 @@ class NewsTableViewCell: UITableViewCell {
     static let cellId: String = "NewsTableViewCellID"
     
     @IBOutlet weak var newsTitleLabel: UILabel!
-    
     @IBOutlet weak var descriptionLabel: UILabel!
-    
     @IBOutlet weak var newsImageView: UIImageView!
 }

@@ -17,6 +17,10 @@
 		E3807E0E1E09A16C00D51FEC /* news1.png in Resources */ = {isa = PBXBuildFile; fileRef = E3807E0D1E09A16C00D51FEC /* news1.png */; };
 		E3807E101E09A17500D51FEC /* news2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E3807E0F1E09A17500D51FEC /* news2.jpg */; };
 		E3807E121E09A18000D51FEC /* news3.png in Resources */ = {isa = PBXBuildFile; fileRef = E3807E111E09A18000D51FEC /* news3.png */; };
+		E3FDFCF21E25459400B1C502 /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDFCF11E25459400B1C502 /* NewsDetailsViewController.swift */; };
+		E3FDFCF41E254C3E00B1C502 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDFCF31E254C3E00B1C502 /* NavigationViewController.swift */; };
+		E3FDFCF61E254F7600B1C502 /* News.json in Resources */ = {isa = PBXBuildFile; fileRef = E3FDFCF51E254F7600B1C502 /* News.json */; };
+		E3FDFCF81E254F9D00B1C502 /* NewsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FDFCF71E254F9D00B1C502 /* NewsInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		E3807E0D1E09A16C00D51FEC /* news1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news1.png; sourceTree = "<group>"; };
 		E3807E0F1E09A17500D51FEC /* news2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = news2.jpg; sourceTree = "<group>"; };
 		E3807E111E09A18000D51FEC /* news3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news3.png; sourceTree = "<group>"; };
+		E3FDFCF11E25459400B1C502 /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
+		E3FDFCF31E254C3E00B1C502 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		E3FDFCF51E254F7600B1C502 /* News.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = News.json; sourceTree = "<group>"; };
+		E3FDFCF71E254F9D00B1C502 /* NewsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 				E3807E0D1E09A16C00D51FEC /* news1.png */,
 				E3807E0F1E09A17500D51FEC /* news2.jpg */,
 				E3807E111E09A18000D51FEC /* news3.png */,
+				E3FDFCF51E254F7600B1C502 /* News.json */,
 				E310AE821E05BB48000F3FE7 /* Assets.xcassets */,
 				E310AE841E05BB48000F3FE7 /* LaunchScreen.storyboard */,
 				E310AE871E05BB48000F3FE7 /* Info.plist */,
@@ -82,7 +91,9 @@
 		E310AE8E1E05BBCE000F3FE7 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E3FDFCF31E254C3E00B1C502 /* NavigationViewController.swift */,
 				E310AE911E05BBFE000F3FE7 /* NewsViewController.swift */,
+				E3FDFCF11E25459400B1C502 /* NewsDetailsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -107,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				E3807E0B1E09965A00D51FEC /* News.swift */,
+				E3FDFCF71E254F9D00B1C502 /* NewsInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +187,7 @@
 				E310AE831E05BB48000F3FE7 /* Assets.xcassets in Resources */,
 				E3807E121E09A18000D51FEC /* news3.png in Resources */,
 				E310AE811E05BB48000F3FE7 /* Main.storyboard in Resources */,
+				E3FDFCF61E254F7600B1C502 /* News.json in Resources */,
 				E3807E0E1E09A16C00D51FEC /* news1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,8 +199,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3FDFCF41E254C3E00B1C502 /* NavigationViewController.swift in Sources */,
+				E3FDFCF21E25459400B1C502 /* NewsDetailsViewController.swift in Sources */,
 				E310AE7C1E05BB48000F3FE7 /* AppDelegate.swift in Sources */,
 				E310AE921E05BBFE000F3FE7 /* NewsViewController.swift in Sources */,
+				E3FDFCF81E254F9D00B1C502 /* NewsInfo.swift in Sources */,
 				E3807E0C1E09965A00D51FEC /* News.swift in Sources */,
 				E310AE941E05BC1A000F3FE7 /* NewsTableViewCell.swift in Sources */,
 			);
